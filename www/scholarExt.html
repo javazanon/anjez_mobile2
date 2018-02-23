@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>الصفحة الرئيسية</title>
+    <script src="cordova.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body dir="rtl"   class="ui-mobile-viewport ui-overlay-a" cz-shortcut-listen="true"
+      id="ui-page-top">
+<form   method="post" enctype="multipart/form-data">
+    <div data-role="page" class="pgs_bgs">
+        <div id="menu_containerxx">
+            <div id="app_main_panel" data-role="panel"  data-position="right" data-display="overlay"
+                 data-theme="b" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-b ui-panel-animate">
+                <div class="ui-panel-inner">
+                    <a href="#" data-rel="close" class="ui-btn ui-btn-icon-right ui-icon-delete">اغلاق القائمة2</a>
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                        <h2>الابتعاث</h2>
+                        <ul data-role="listview" class="ui-listview" data-filter="true">
+                            <li><a href="#" onclick="navigateUrl(1)" class="ui-btn ui-btn-icon-left ui-icon-carat-l">بيانات الابتعاث</a></li>
+                            <li><a href="#" onclick="navigateUrl(2)" class="ui-btn ui-btn-icon-left ui-icon-carat-l">طلب تمديد ابتعاث</a></li>
+                            <li><a href="#" onclick="navigateUrl(3)" class="ui-btn ui-btn-icon-left ui-icon-carat-l">متابعة الطلبات</a></li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                        <h2>الاجازات</h2>
+                        <ul data-role="listview" data-filter="true">
+                            <li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-carat-l">تقديم اجازة اعتياديه</a></li>
+                            <li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-carat-l">تقديم اجازة مرضيه</a></li>
+                            <li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-carat-l">تقديم اجازة استثنائية</a></li>
+                            <li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-carat-l">تقديم اجازة وضع</a></li>
+                            <li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-carat-l">تقديم اجازة ابتعاث</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="header" class="ui-header ui-bar-b" role="banner" data-theme="b">
+            <div class="main_title" style="text-align: center"><h1>انجز موبايل</h1></div>
+            <div>
+                <a href="#app_main_panel" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-b"></a>
+                <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-right ui-icon-refresh ui-btn-b" onclick="window.location.reload()"></a>
+            </div>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <div class="ui-grid-a ui-responsive" >
+                <div class="ui-block-a">بداية التمديد</div>
+                <div class="ui-block-b">
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <label for="select_start_date_year">سنة</label>
+                        <select name="select_start_date_year" id="select_start_date_year">
+                            <option disabled selected value> سنة </option>
+                        </select>
+                        <select name="select_start_date_month" id="select_start_date_month">
+                            <option disabled selected value> شهر </option>
+                        </select>
+                        <select name="select_start_date_day" id="select_start_date_day">
+                            <option disabled selected value> اليوم </option>
+                        </select>
+
+                    </div>
+                </div>
+
+
+                <div class="ui-block-a">الدرجة العلمية</div>
+                <div class="ui-block-b">
+                    <select name="ddl_scholar_grade" id="ddl_scholar_grade">
+                        <option disabled selected value> الدرجة العلمية </option>
+                    </select>
+                </div>
+                <div class="ui-block-a">مدة التمديد</div>
+                <div class="ui-block-b">
+                    <div data-role="controlgroup" data-type="horizontal">
+
+                        <select name="select_period_date_year" id="select_period_date_year">
+                            <option disabled selected value> سنة </option>
+                        </select>
+
+                        <select name="select_period_date_month" id="select_period_date_month">
+                            <option disabled selected value> شهر </option>
+                        </select>
+                        <select name="select_period_date_day" id="select_period_date_day">
+                            <option disabled selected value> يوم </option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="ui-block-a">رقم التمديد</div>
+                <div class="ui-block-b">
+                    <input type="text" id="txt_tamdeed_count" readonly/> </div>
+
+
+
+                <div class="ui-block-a">تاريخ نهاية التمديد</div>
+                <div class="ui-block-b">
+                    <input type="text" id="txt_tamdeed_end_date" value=" /  /  هجرى" /></div>
+
+
+
+                <div class="ui-block-a">الرئيس المباشر</div>
+                <div class="ui-block-b">
+                    <select name="ddl_scholar_takleef" id="ddl_scholar_takleef">
+                        <option disabled selected value> الرئيس المباشر </option>
+                    </select>
+                </div>
+
+                <div class="ui-block-a">المبررات</div>
+                <div class="ui-block-b">
+                    <textarea cols="40" rows="8" name="txt_reason" id="txt_reason" data-mini="true"></textarea>
+                </div>
+            </div><!-- /grid-c -->
+            <div class="ui-grid-solo " >
+                <div class="ui-block-a">
+                    <a href="#" id="btn_sendScholarExtToServer" name="btn_sendScholarExtToServer"  class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-b">ارسال الطلب</a>
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- /content -->
+        <div  id="home_footer"  data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup" role="contentinfo" data-theme="b">
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+    <script src="js/scholarExt.js"></script>
+</form>
+
+
+</body>
+</html>
