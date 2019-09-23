@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول على النظام</title>
+
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body   dir="rtl" class="ui-mobile-viewport ui-overlay-a" cz-shortcut-listen="true" id="ui-page-top" >
+<div data-role="page" class="pgs_bgs">
+    <div data-role="header" data-theme="b">
+        <div class="main_title"><h1>انجز موبايل</h1></div>
+    </div><!-- /header -->
+    <div role="main" class="ui-content" style="text-align: right">
+        <div class="main_title"><h1>تسجيل الدخول</h1></div>
+        <label for="txt-UserName" class="label_form">اسم المستخدم</label>
+        <input type="text" name="txt-UserName" id="txt-UserName" value="" style="text-align: right">
+        <br/>
+        <label for="txt-password" class="label_form">كلمة المرور</label>
+        <input type="password" name="txt-password" id="txt-password" value=""   style="text-align: right">
+        <fieldset data-role="controlgroup" dir="rtl" style="text-align: right">
+            <input type="checkbox" name="chck-rememberme" id="chck-rememberme" checked="" style="text-align: right">
+            <label for="chck-rememberme">تذكرنى</label>
+        </fieldset>
+
+        <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop"
+           data-position-to="window" id="btn_checklogin" name="btn_checklogin"
+           class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">تسجيل الدخول</a>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup" role="contentinfo" data-theme="b">
+        <div class="main_title"><h4>جميع الحقوق محفوظه لجامعة الملك عبد العزيز @2018</h4></div>
+    </div><!-- /header -->
+</div><!-- /page -->
+<script src="js/login.js"></script>
+<script src="cordova.js"></script>
+</body>
+</html>

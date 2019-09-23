@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>تفاصيل الطلب</title>
+    <script src="js/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body   onload="fillPage()" dir="rtl" class="ui-mobile-viewport ui-overlay-a" cz-shortcut-listen="true" id="ui-page-top" >
+<div data-role="page" class="pgs_bgs">
+    <div data-role="header" data-theme="b">
+        <div class="main_title"><h1>انجز موبايل</h1></div>
+    </div><!-- /header -->
+    <div role="main" class="ui-content" style="text-align: right">
+        <div data-role="collapsible" data-mini="true" data-iconpos="right">
+                <h4>بيانات الطلب الاساسية</h4>
+                <div class="ui-content">
+                    <div class='ui-grid-a' >
+                        <div class='ui-block-a'>
+                            <label id="REQ_ID"> </label>
+                        </div>
+                        <div class='ui-block-b'>رقم الطلب : </div>
+                        <div class='ui-block-a'>
+                            <label id="REQ_TYPE_title" > </label>
+                        </div>
+                        <div class='ui-block-b'>نوع الطلب </div>
+
+                        <div class='ui-block-a'>
+                            <label id="GRADE_TYPE_title"> </label>
+                        </div>
+                        <div class='ui-block-b'>الدرجة المبتعث لها : </div>
+                        <div class='ui-block-a'>
+                            <label id="START_DATE"> </label>
+                        </div>
+                        <div class='ui-block-b'>تاريخ بداية البعثة : </div>
+
+
+                        <div class='ui-block-a'>
+                            <label id="EXT_PERIOD"> </label>
+                        </div>
+                        <div class='ui-block-b'>مدة الابتعاث : </div>
+                        <div class='ui-block-a'>
+                            <label id="EXT_REASON">  </label>
+                        </div>
+                        <div class='ui-block-b'> المبررات: </div>
+                    </div>
+                </div>
+        </div>
+        <div data-role="collapsible" data-mini="true" data-iconpos="right">
+                <h4>مرفقات الطلب</h4>
+                 <div class="ui-content" id="content_inbox">
+
+                 </div>
+        </div>
+        <div data-role="collapsible" data-mini="true" data-iconpos="right">
+                <h4>اضافة مرفق جديد</h4>
+                 <div class="ui-content">
+                    <div class="ui-grid-c ui-responsive" >
+                        <div class="ui-block-a">المرفق الاول</div>
+                        <div class="ui-block-b">
+                            <select name="ddl_attach_1" id="ddl_attach_1">
+                                <option disabled selected value> المرفق الاول</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-c">
+                            <input id="file1" type="file" accept="application/pdf" />
+                        </div>
+                        <div class="ui-block-c">
+                            <input id="btn_upload_file" type="button"  value="رفع الملف"/>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup" role="contentinfo" data-theme="b">
+        <div class="main_title"><h4>جميع الحقوق محفوظه لجامعة الملك عبد العزيز @2018</h4></div>
+    </div><!-- /header -->
+</div><!-- /page -->
+<script src="js/ScholarReqExtDet.js"></script>
+<script src="cordova.js"></script>
+</body>
+</html>
